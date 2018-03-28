@@ -1,0 +1,29 @@
+<html> 
+<head>
+	<title>Todo apps desktop version.</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body>
+	<h1>To Do List App</h1>
+
+	<form id="todoForm">
+		<input id="todoInput">
+		<button type="button" onclick="todoList()">click me</button>
+	</form>
+	<!--list will  be visible here-->
+	<ol id="todoList">
+
+	</ol>
+
+	<script>
+		function todoList(){
+			var item=document.getElementById('todoInput').value;
+			var text=document.createTextNode(item);
+			var newItem = document.createElement('li');
+			newItem.appendChild(text);
+			document.getElementById('todoList').appendChild(newItem);
+			};
+	</script>
+
+</body>
+</html>
